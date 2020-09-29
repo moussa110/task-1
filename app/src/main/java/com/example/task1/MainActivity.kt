@@ -8,12 +8,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val category = listOf("تم الالغاء", "تم القبول", "قيد الانتظار")
-    var adapter = RecyclerAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         showCategoryInTab(category)
-        main_rv.adapter = adapter
 
         main_mine_tv.setOnClickListener {
             main_mine_tv.setBackgroundResource(R.drawable.timeline_text_background)
